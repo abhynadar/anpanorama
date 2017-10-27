@@ -1,2 +1,5 @@
 node_modules
 dist
+server/mongo/db
+server/mongo/log
+
