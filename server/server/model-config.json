@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "anpanoramadb"
+  },
+  "AccessToken": {
+    "dataSource": "anpanoramadb",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "anpanoramadb",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "anpanoramadb",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "anpanoramadb",
+    "public": false
+  },
+  "Thought": {
+    "dataSource": "anpanoramadb",
+    "public": true
+  }
+}
