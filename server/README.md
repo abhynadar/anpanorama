@@ -37,6 +37,8 @@ $ <your-initial>-mongo-start-client.bat
 //This will start mongo client session
 
 ----------------------------------------------------------------------------------
+//NOTE - This is to stop and delete your mongod service. So no need to run this now. You should do so when you no longer want to work on this project
+
 //Execute <your-initial>-mongod-stop-delete-service.bat from command prompt that is run with administrative rights
 $ <your-initial>-mongod-stop-delete-service.bat
 //This will stop and delete the windows service for mongod
