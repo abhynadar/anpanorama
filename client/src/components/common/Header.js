@@ -6,7 +6,7 @@ const Header = ({loading}) => {
 		<div className="header clearfix">
 		<nav>
 			<ul className="nav nav-pills pull-right">
-			{loading && <li role="presentation"  activeClassName="active" ><Link to="" >Loading...</Link></li> }
+			{loading && <li role="presentation"  activeClassName="active" ><Link to="" >Loading...</Link></li>}
 			<li role="presentation" activeClassName="active" ><IndexLink to="/" >Home</IndexLink></li>
 			<li role="presentation" activeClassName="active" ><Link to="/learn-with-me" activeClassName="active" >Learn with me</Link></li>
 			<li role="presentation" activeClassName="active" ><Link to="/thoughts" activeClassName="active" >Thoughts</Link></li>
