@@ -6,7 +6,7 @@ module.exports = function(app) {
   var mongoDs = app.dataSources.anpanoramadb;
   //create all models
   async.parallel({
-    thoughts: async.apply(createThoughts),
+    //thoughts: async.apply(createThoughts),
   }, function(err, results) {
     if (err) throw err;
     console.log('> models created sucessfully');
@@ -14,9 +14,11 @@ module.exports = function(app) {
 
   //create thoughts
   function createThoughts(cb) {
+    //mongoDs.autoupdate('Thought', function(err) {
     mongoDs.automigrate('Thought', function(err) {
       if (err) return cb(err);
       var Thought = app.models.Thought;
+
       var DAY_IN_MILLISECONDS = 1000 * 60 * 60 * 24;
       Thought.create([{
         date: Date.now() - (DAY_IN_MILLISECONDS * 5),
@@ -39,6 +41,7 @@ module.exports = function(app) {
         title: "Prince of Peace",
         description: "Everyone wants peace, but they do not want to come to Jesus - The Prince of Peace.",
       }], cb);
+
     });
   }
 };

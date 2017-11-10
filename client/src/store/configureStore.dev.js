@@ -5,8 +5,8 @@ import thunk from 'redux-thunk';
 
 export default function configureStore(initialState) {
 	return createStore(
-		rootReducer, 
-		initialState, 
+		rootReducer,
+		initialState,
 		applyMiddleware(thunk, reduxImmutableStateInvariant())
 	);
 }

@@ -10,6 +10,8 @@ class ThoughtsPage extends React.Component {
 		super(props, context);
 
 		this.redirectToAddThoughtPage = this.redirectToAddThoughtPage.bind(this);
+
+		//React.PropTypes.object.dispatch(thoughtActions.loadThoughts());
 	}
 
 	redirectToAddThoughtPage() {

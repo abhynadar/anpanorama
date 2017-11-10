@@ -2,7 +2,7 @@
 
 
 ```
-//Prerequisite - Install mongodb 
+//Prerequisite - Install mongodb
 
 //Clone git repository
 $ git clone https://github.com/abhynadar/anpanorama.git
@@ -50,6 +50,35 @@ $ npm install
 
 //Execute npm start to start the api service
 $ node start
+
+//Goto browser and access
+http://localhost:3001/explorer
+
+//You should be able to see three items listed - SiteAdmin, Thought, User
+
+//You will be able to try out GET for Thought
+
+//If you attempt POST on Thought then this will fail with error saying authentication required
+
+//Click on SiteAdmin and scroll down to POST - SiteAdmin
+
+//Click on POST for SiteAdmin and enter data like below and click on try it
+{
+"username": "abhyn1",
+"email": "abhyn1@anpanorama.com",
+"password": "abhyn1001"
+}
+
+//Click on SiteAdmin and scroll down to POST - SiteAdmin/login
+
+//Click on POST for SiteAdmin/login and enter data like below and click on try id
+{
+"email": "abhyn1@anpanorama.com", "password": "abhyn1001"
+}
+
+//copy the data value in id field of the response json and paste it in top bar where it says Set Token and click on Set Access Token
+
+//Now you should be able to POST thoughts
 
 ```
 ---

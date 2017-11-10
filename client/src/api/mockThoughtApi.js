@@ -45,7 +45,7 @@ const generateId = (thought) => {
   return replaceAll(thought.title, ' ', '-');
 };
 
-class ThoughtApi {
+class MockThoughtApi {
   static getAllThoughts() {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -94,4 +94,4 @@ class ThoughtApi {
   }
 }
 
-export default ThoughtApi;
+export default MockThoughtApi;

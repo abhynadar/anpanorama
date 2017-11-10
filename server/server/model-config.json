@@ -32,6 +32,10 @@
     "dataSource": "anpanoramadb",
     "public": false
   },
+  "SiteAdmin": {
+    "dataSource": "anpanoramadb",
+    "public": true
+  },
   "Thought": {
     "dataSource": "anpanoramadb",
     "public": true

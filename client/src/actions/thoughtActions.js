@@ -1,5 +1,6 @@
 import * as types from './actionTypes';
-import thoughtApi from '../api/mockThoughtApi';
+import thoughtApi from '../api/thoughtApi';
+//import thoughtApi from '../api/MockThoughtApi';
 import {beginAjaxCall, ajaxCallError} from './ajaxStatusActions';
 
 export function loadThoughtsSuccess(thoughts) {
@@ -18,14 +19,14 @@ export function loadThoughts() {
   return function (dispatch) {
     dispatch(beginAjaxCall());
 
-    return thoughtApi.getAllThoughts()
-      .then(thoughts => {
-        dispatch(loadThoughtsSuccess(thoughts));
-      })
-      .catch(error => {
-        dispatch(ajaxCallError());
-        throw(error);
-      });
+      return thoughtApi.getAllThoughts()
+        .then(thoughts => {
+          dispatch(loadThoughtsSuccess(thoughts));
+        })
+        .catch(error => {
+          dispatch(ajaxCallError());
+          throw(error);
+        });
   };
 }
 

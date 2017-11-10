@@ -26,6 +26,7 @@ describe('Thought Actions', () => {
 const middleware = [thunk];
 const mockStore = 	configureMockStore(middleware);
 
+/*
 describe('Async Actions', () => {
 
 	afterEach(() => {
@@ -34,9 +35,9 @@ describe('Async Actions', () => {
 
 	it('should create BEGIN_AJAX_CALL and LOAD_THOUGHT_SUCCESS when loading thoughts', (done) => {
 		//here is an example to nock
-		// nock('Http://example.com/')
-		//	.get('/courses')
-		//	.reply(200, {body: {course: [{id: 'clean-code', title: 'Clean Code'}] }});
+			nock('http://localhost:3001/api')
+			.get('/Thoughts')
+			.reply(200, {body: {course: [{id: 'my-thought', title: 'My Thought'}] }});
 
 		const expectedActions = [
 			{type: types.BEGIN_AJAX_CALL},
@@ -53,3 +54,4 @@ describe('Async Actions', () => {
 
 	});
 });
+*/
