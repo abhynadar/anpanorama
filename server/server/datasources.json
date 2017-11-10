@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "anpanoramadb": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "",
+    "database": "anpanoramadb",
+    "password": "",
+    "name": "anpanoramadb",
+    "user": "",
+    "connector": "mongodb"
+  }
+}
